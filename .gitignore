@@ -7,4 +7,4 @@ __pycache__/
 .venv/
 
 #ignore Agents MD File
-agents.md
+AGENTS.md
