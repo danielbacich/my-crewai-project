@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ my_dev_crew
+# ⚡ my_crewai_project
 
 **Collaborative Multi-Agent Intelligence Framework**
 
