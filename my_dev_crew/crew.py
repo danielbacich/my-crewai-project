@@ -8,9 +8,7 @@ from crewai.project import CrewBase, agent, crew, task
 load_dotenv()
 load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
-# CrewAI injects cache_breakpoint on every system/user message. Groq (and
-# other strict OpenAI-compatible APIs) reject that field. Native Anthropic
-# adapters translate it; the LiteLLM path does not. Disable the marker.
+# Disables cache breakpoints for Groq and other strict OpenAI-compatible APIs
 crewai_cache.mark_cache_breakpoint = lambda msg: msg
 
 @CrewBase
@@ -19,8 +17,7 @@ class MyDevCrew():
 
     # Define Custom Model Endpoints Securely using .env
 
-    # 1. Cloudflare Workers AI - Llama 3.1 8B Fast
-    # llama-3.1-8b-instruct was deprecated 2026-05-30; -fast remains active.
+    # 1. Cloudflare Workers AI - Llama 3.1 8B Fast - 10k neuron limit daily
     _cf_account_id = (os.getenv("CLOUDFLARE_ACCOUNT_ID") or "").strip()
     cloudflare_llm = LLM(
         model="@cf/meta/llama-3.1-8b-instruct-fast",

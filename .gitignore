@@ -5,3 +5,6 @@
 __pycache__/
 *.pyc
 .venv/
+
+#ignore Agents MD File
+agents.md
