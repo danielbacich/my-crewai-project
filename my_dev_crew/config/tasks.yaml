@@ -1,0 +1,27 @@
+analyze_requirements_task:
+  description: >
+    Respond with exactly one word: "Blueprint". Do not add any other text.
+  expected_output: >
+    The single word "Blueprint".
+  agent: codebase_architect
+
+write_code_task:
+  description: >
+    Respond with exactly one word: "Code". Do not add any other text.
+  expected_output: >
+    The single word "Code".
+  agent: lead_developer
+
+review_code_task:
+  description: >
+    Respond with exactly one word: "Approved". Do not add any other text.
+  expected_output: >
+    The single word "Approved".
+  agent: quality_assurance
+
+compile_docs_task:
+  description: >
+    Respond with exactly one word: "Done". Do not add any other text.
+  expected_output: >
+    The single word "Done".
+  agent: documentation_assistant
